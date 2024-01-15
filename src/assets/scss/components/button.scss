@@ -1,0 +1,51 @@
+.button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 24px;
+  background: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.15s;
+  line-height: 24px;
+
+  &:hover {
+    background: var(--grey-bg);
+  }
+
+  &:is(a) {
+    text-decoration: none;
+  }
+
+  &.expanded {
+    display: flex;
+    width: 100%;
+  }
+
+  &.secondary{
+    background: var(--secondary-color);
+    color: var(--on-secondary-color);
+    border: none;
+
+    &:hover {
+      background: var(--secondary-light-color);
+    }
+  }
+}
+
+.pag-button{
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: var(--secondary-color);
+  transition: all 0.15s;
+
+  &:hover, &.active{
+    background-color: var(--primary-color);
+  }
+}

@@ -1,0 +1,65 @@
+@function getCurrentBp($bp) {
+  $total: length($breakpoints);
+
+  @for $j from 1 through $total {
+    $current: nth(nth($breakpoints, $j), 1);
+
+    @if $current == $bp {
+      @return $j;
+    }
+  }
+}
+
+@mixin breakpoint($val) {
+  // Size or keyword
+  $bp: nth($val, 1);
+  // Direction of media query (up, down, or only)
+  $dir: if(length($val) > 1, nth($val, 2), up);
+
+  $first: nth(nth($breakpoints, 1), 1);
+  $last: nth(nth($breakpoints, length($breakpoints)), 1);
+  $current: getCurrentBp($bp);
+
+  @if $dir == up {
+    @if $bp == $first {
+      @content;
+    } @else {
+      $width: map-get($breakpoints, $bp);
+
+      @media screen and (min-width: #{$width}px) {
+        @content;
+      }
+    }
+  } @else if $dir == down {
+    @if $bp == $last {
+      @content;
+    } @else {
+      $width: nth(nth($breakpoints, $current + 1), 2)-1;
+
+      @media screen and (max-width: #{$width}px) {
+        @content;
+      }
+    }
+  } @else if $dir == only {
+    @if $bp == $first {
+      $width: nth(nth($breakpoints, $current + 1), 2)-1;
+
+      @media screen and (max-width: #{$width}px) {
+        @content;
+      }
+    } @else if $bp == $last {
+      $width: map-get($breakpoints, $bp);
+
+      @media screen and (min-width: #{$width}px) {
+        @content;
+      }
+    } @else {
+      $min-width: map-get($breakpoints, $bp);
+      $max-width: nth(nth($breakpoints, $current + 1), 2)-1;
+
+      @media screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+        @content;
+      }
+    }
+  }
+}

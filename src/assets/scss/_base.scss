@@ -1,0 +1,102 @@
+@import './settings';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: {
+    family: var(--body-font-family);
+    size: var(--body-font-size);
+  }
+  line-height: var(--body-line-height);
+  color: var(--body-color);
+  background: var(--body-background);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+@include allHeaders {
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--black);
+}
+
+$headers: map-get($header-styles, 'small');
+
+@each $selector, $options in $headers {
+  #{$selector} {
+    @each $option, $val in $options {
+      #{$option}: var(--#{$selector}-#{$option});
+    }
+  }
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-left: var(--container-space);
+  padding-right: var(--container-space);
+  margin-left: auto;
+  margin-right: auto;
+
+  &.min{
+    max-width: 896px;
+  }
+}
+
+.section {
+  margin-top: var(--section-space);
+  margin-bottom: var(--section-space);
+
+  .inner {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+  }
+
+  &.no-out-space {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.no-top-space {
+    margin-top: 0;
+  }
+
+  &.no-bottom-space {
+    margin-bottom: 0;
+  }
+}
+
+.main-ttl{
+  font-family: var(--ttl-main-family);
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.text-center{
+  text-align: center;
+}
+
+ul:not(class), ol:not(class){
+  padding-left: 15px;
+}
+
+

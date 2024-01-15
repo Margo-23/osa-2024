@@ -1,0 +1,50 @@
+// Scss options
+$breakpoints: (
+  small: 0,
+  medium: 768,
+  large: 1024,
+  xlarge: 1300,
+);
+
+$header-styles: (
+  small: (
+    'h1': (
+      'font-size': 20px,
+    ),
+    'h2': (
+      'font-size': 20px,
+    ),
+    'h3': (
+      'font-size': 20px,
+    ),
+    'h4': (
+      'font-size': 18px,
+    ),
+    'h5': (
+      'font-size': 16px,
+    ),
+    'h6': (
+      'font-size': 14px,
+    ),
+  ),
+  medium: (
+    'h1': (
+      'font-size': 40px,
+    ),
+    'h2': (
+      'font-size': 40px,
+    ),
+    'h3': (
+      'font-size': 20px,
+    ),
+    'h4': (
+      'font-size': 18px,
+    ),
+    'h5': (
+      'font-size': 16px,
+    ),
+    'h6': (
+      'font-size': 14px,
+    ),
+  ),
+);

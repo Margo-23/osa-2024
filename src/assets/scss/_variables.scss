@@ -1,0 +1,69 @@
+@import './settings';
+@import './mixins/index';
+
+:root {
+  // Fonts
+  --body-font-family: 'Inter', sans-serif;
+  --body-font-size: 16px;
+  --body-line-height: 1.5;
+  --ttl-main-family: 'Montserrat', sans-serif;
+  // Headers
+  @each $bp, $header in $header-styles {
+    @if $bp == 'small' {
+      @each $selector, $styles in $header {
+        @each $name, $val in $styles {
+          --#{$selector}-#{$name}: #{$val};
+        }
+      }
+    } @else {
+      @include breakpoint($bp) {
+        @each $selector, $styles in $header {
+          @each $name, $val in $styles {
+            --#{$selector}-#{$name}: #{$val};
+          }
+        }
+      }
+    }
+  }
+  // Palette
+  --black: #171717;
+  --dark-grey: #6D6D6D;
+  --ligth-grey: #C9C9D3;
+  --white: #fff;
+  --primary-color: #000080;
+  --on-primary-color: #fff;
+  --secondary-color: #FFEB38;
+  --secondary-light-color: #EADE73;
+  --green: #87EE9E;
+  --coral: #FFA0A0;
+  --on-secondary-color: #000080;
+  --grey-bg: #F5F5F5;
+
+  // Colors
+  --body-color: var(--dark-grey);
+  --body-background: var(--white);
+
+  // Sizes
+  --gap: 40px;
+  --content-width: 440px;
+  --container-space: 20px;
+  --container-width: calc(var(--content-width) + var(--container-space) * 2);
+  --section-space: 60px;
+
+  // set content width breakpoint size
+  @each $name, $val in $breakpoints {
+    @if $name != 'small' {
+      @include breakpoint($name) {
+        --content-width: #{$val}px;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    --section-space: 80px;
+  }
+
+  @include breakpoint(large) {
+    --section-space: 100px;
+  }
+}
