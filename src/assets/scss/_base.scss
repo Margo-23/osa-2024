@@ -99,4 +99,19 @@ ul:not(class), ol:not(class){
   padding-left: 15px;
 }
 
+main {
+  margin-top: 97px;
+}
+
+.only-desc{
+  @include breakpoint(medium down) {
+    display: none !important;
+  }
+}
+
+.only-mob{
+  @include breakpoint(large up) {
+    display: none !important;
+  }
+}
 

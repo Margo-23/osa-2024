@@ -1,5 +1,62 @@
-<header>
+<header class="header">
 	<div class="container">
-		<h2>Header</h2>
+        <div class="header-inner">
+            <a class="header-logo" href="/">
+                <img class="logo" src="{{root}}/assets/img/logo.svg" alt="img">
+            </a>
+            <nav class="header-menu only-desc">
+                <ul class="header-list">
+                    <li class="header-item"><a href="#">Про нас</a></li>
+                    <li class="header-item"><a href="#">Наші проєкти</a></li>
+                    <li class="header-item"><a href="#">Звіти</a></li>
+                </ul>
+
+                <div class="lang-list">
+                    <button class="lang-list-btn is-active" data-open="#header-lang">
+                        <img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">
+                        UA
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="23" height="23" stroke="#000080"/>
+                            <path d="M7.41 8L12 12.58L16.59 8L18 9.41L12 15.41L6 9.41L7.41 8Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <div class="lang-list-all" id="header-lang" style="display: none;">
+                        <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">EN</a>
+                        <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">UA</a>
+                        <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">FR</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-btns">
+                <a href="#" class="button secondary only-desc">Зробити внесок</a>
+                <div class="burger only-mob"><button data-open="#off-canvas"></button></div>
+            </div>
+        </div>
 	</div>
 </header>
+
+<div class="off-canvas" id="off-canvas" style="display: none;">
+    <div class="off-canvas-menu">
+        <ul class="header-list">
+            <li class="header-item"><a href="#">Про нас</a></li>
+            <li class="header-item"><a href="#">Наші проєкти</a></li>
+            <li class="header-item"><a href="#">Звіти</a></li>
+        </ul>
+        <div class="lang-list" data-lang-drop="lang-list">
+            <button class="lang-list-btn is-active" data-open="#header-lang-canvas">
+                <img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">
+                UA
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="23" height="23" stroke="#000080"/>
+                    <path d="M7.41 8L12 12.58L16.59 8L18 9.41L12 15.41L6 9.41L7.41 8Z" fill="white"/>
+                </svg>
+            </button>
+            <div class="lang-list-all" id="header-lang-canvas" style="display: none;">
+                <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">EN</a>
+                <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">UA</a>
+                <a href="#" class="lang-list-item"><img src="{{root}}/assets/img/icons/lang-ua.svg" height="24" width="24" alt="ua">FR</a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="button secondary">Зробити внесок</a>
+</div>

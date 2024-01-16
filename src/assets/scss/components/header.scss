@@ -1,0 +1,230 @@
+@import '../settings';
+
+.header{
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 77px;
+
+    @include breakpoint(medium down) {
+      height: 30px;
+      width: 48px;
+    }
+  }
+
+  &-inner{
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(medium down) {
+      padding: 12px 0;
+    }
+  }
+
+  &-menu{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a{
+      color: var(--white);
+      text-decoration: none;
+      transition: all .3s;
+
+      &:hover, &:focus{
+        text-decoration: underline;
+      }
+    }
+
+    .off-canvas &{
+      flex-direction: column;
+      gap: 30px;
+
+      a{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.lang-list{
+  position: relative;
+
+  &-btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--white);
+    padding: 8px;
+
+    img{
+      margin-right: 8px;
+    }
+
+    svg{
+      transition: all .1s;
+    }
+
+    &.open{
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+
+    .off-canvas &{
+      font-size: 20px;
+    }
+  }
+
+  &-all{
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .off-canvas &{
+      position: static;
+      font-size: 20px;
+    }
+  }
+
+  &-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    text-decoration: none;
+    transition: all .3s;
+    padding: 0 8px;
+
+    &:first-child{
+      padding-top: 8px;
+    }
+    &:last-child{
+      padding-bottom: 8px;
+    }
+
+    &:hover, &:focus{
+      text-decoration: underline;
+    }
+  }
+}
+
+.burger{
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  order: 4;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  button{
+    background: #fff;
+    border: none;
+    height: 2px;
+    left: 10px;
+    margin: -1px 0 0;
+    outline: none!important;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    width: 20px;
+
+    &:before {
+      background: #fff;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform-origin: 1.5px center;
+      transition: .3s;
+      width: 20px;
+      top: -7px
+    }
+
+    &:after{
+      background: #fff;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform-origin: 1.5px center;
+      transition: .3s;
+      width: 20px;
+      bottom: -7px
+    }
+
+    &.open{
+      background: transparent;
+
+      &:before{
+        top: 0;
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+      }
+
+      &:after{
+        bottom: 0;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+}
+
+.off-canvas{
+  width: 100%;
+  bottom: 0;
+  padding: 60px 40px;
+  background-color: var(--primary-color);
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  top: 64px;
+  left: 0;
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden;
+
+  &-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button.secondary{
+    min-width: 183px;
+  }
+}

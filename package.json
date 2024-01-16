@@ -12,8 +12,7 @@
     "fix": "npx eslint \"src/assets/js/{**/*,*}.{js,ts,jsx,tsx}\" --fix"
   },
   "dependencies": {
-    "zepto": "^1.2.0",
-    "zepto-modules": "^1.0.1"
+    "jquery": "^3.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
