@@ -5,11 +5,23 @@
   padding: 72px 0 50px 0;
   color: var(--white);
 
+  @include breakpoint(medium down) {
+    padding: 80px 0;
+  }
+
   &-top{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 50px;
+
+    @include breakpoint(medium down) {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &-middle{
@@ -19,6 +31,13 @@
     padding: 75px 0 20px 0;
     width: 100%;
     border-bottom: 1px solid var(--white);
+
+    @include breakpoint(medium down) {
+      flex-direction: column-reverse;
+      gap: 80px;
+      padding: 40px 0 20px 0;
+      text-align: center;
+    }
   }
 
   &-bottom{
@@ -26,6 +45,12 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
+    gap: 20px;
+
+    @include breakpoint(medium down) {
+      flex-direction: column;
+      padding-top: 24px;
+    }
   }
 
   &-ttl{
@@ -35,11 +60,19 @@
     letter-spacing: -0.8px;
     text-transform: uppercase;
     max-width: 636px;
+
+    @include breakpoint(medium down) {
+      font-size: 20px;
+    }
   }
 
   &-mail{
     font-size: 28px;
     font-weight: 600;
+
+    @include breakpoint(medium down) {
+      font-size: 20px;
+    }
   }
 
   &-link, &-mail{
@@ -52,6 +85,23 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      li{
+        a{
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img{
+            max-width: 100%;
+          }
+        }
+      }
     }
   }
 

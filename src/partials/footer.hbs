@@ -11,14 +11,16 @@
             <div class="footer-label">OSAHELP © 2024 / All Rights Reserved </div>
             <div class="footer-social">
                 <ul class="footer-social-list">
-                    <li><a href="#"><img src="{{root}}/assets/img/icons/telegram.svg" alt="social"></a></li>
+                    {{#each socials}}
+                        <li><a href="#"><img src="{{root}}/assets/img/icons/{{this}}.svg" alt="social"></a></li>
+                    {{/each}}
                 </ul>
             </div>
 
         </div>
 		<div class="footer-bottom">
             <a class="footer-link" href="#">Публічна оферта</a>
-            <a class="footer-link" href="#">Політика конфіденційності</a>
+            <a class="footer-link" href="/confidentiality.html">Політика конфіденційності</a>
             <a class="footer-link" href="#">Політика Cookie</a>
         </div>
 	</div>

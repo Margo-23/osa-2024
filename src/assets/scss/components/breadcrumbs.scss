@@ -1,3 +1,5 @@
+@import '../settings';
+
 ul.bread{
   list-style: none;
   padding: 60px 0 40px 0;
@@ -16,5 +18,9 @@ ul.bread{
 
   li:last-child{
     color: var(--primary-color);
+  }
+
+  @include breakpoint(medium down) {
+    display: none;
   }
 }
