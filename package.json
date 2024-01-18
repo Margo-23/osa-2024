@@ -12,7 +12,8 @@
     "fix": "npx eslint \"src/assets/js/{**/*,*}.{js,ts,jsx,tsx}\" --fix"
   },
   "dependencies": {
-    "jquery": "^3.7.0"
+    "jquery": "^3.7.0",
+    "swiper": "^11.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",

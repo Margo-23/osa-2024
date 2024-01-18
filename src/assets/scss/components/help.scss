@@ -1,0 +1,34 @@
+.help{
+  padding: 100px 0;
+
+  @include breakpoint(medium down) {
+    padding: 70px 0;
+  }
+
+  @include breakpoint(small down) {
+    padding: 50px 0;
+  }
+
+  &-card{
+    padding: 30px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-slider{
+    padding: 34px 50px 0 50px;
+    position: relative;
+
+    @include breakpoint(small down) {
+      padding: 14px 0 0 0;
+    }
+  }
+
+  &-ttl{
+    font-size: 19px;
+    color: var(--black);
+    font-weight: 600;
+  }
+}

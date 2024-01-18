@@ -1,26 +1,66 @@
 ---
 title: Громадська організація Оса
 ---
-<section class="section no-top-space">
+<section class="section">
 	<div class="container">
-		<h1 class="main-ttl text-center">{{title}}</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut consequuntur dignissimos enim eum facere fugiat
-			hic ipsam ipsum nesciunt pariatur recusandae, veritatis voluptatem! Commodi iste maiores repellendus sequi
-			voluptatum.</p>
-		<p>Aspernatur deleniti est neque nulla obcaecati porro recusandae vel. Consequuntur corporis delectus deleniti dolor
-			exercitationem illum magnam necessitatibus odio! A assumenda eum molestias nihil officiis perferendis, suscipit!
-			Consequuntur, <a href="#">molestias quis</a>?</p>
-		<p>
-			<a href="#" class="button">Запит на допомогу</a>
-			<a href="#" class="button secondary">Зробити внесок</a>
-		</p>
-		<p>
-			<a href="#" class="button expanded">Долучитися до команди</a>
-            <ul>
-        <li>Ви можете подати запит на доступ, виправлення, оновлення або видалення ваших персональних даних, зібраних під час використання Вебсайту.</li>
-        <li>Ви можете подати запит на доступ, виправлення, оновлення або видалення ваших персональних даних, зібраних під час використання Вебсайту.</li>
-        <li>Ви можете подати запит на доступ, виправлення, оновлення або видалення ваших персональних даних, зібраних під час використання Вебсайту.</li>
-    </ul>
-		</p>
+        <div class="content-flex align-center">
+            <div class="content-ttl">
+                <h1 class="main-ttl">{{title}}</h1>
+            </div>
+            <div class="content-flex-txt small">Офіційно зареєстроване об'єднання волонтерів. Наша мета - це надійний тил для наших військових та підтримка цивільних у гарячих точках фронту.</div>
+        </div>
 	</div>
+</section>
+
+<section class="section hero">
+        <img class="hero-img" src="https://dummyimage.com/1440x600/6f6fa1/fff" alt="main image">
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Про нас</span>
+                <h2 class="ttl">хаос став нашою силою, а оса — символом</h2>
+            </div>
+            <div class="content-flex-txt">Утворившись з хаосу на початку повномасштабного вторгнення, ми щоденно працюємо на межі власних можливостей. Відкриваємо нові збори, купуємо та ремонтуємо автівки, проводимо гуманітарні виїзди у прифронтові території та робимо ще багато інших не менш важливих справ.</div>
+        </div>
+        <div class="galery">
+            <div class="galery-imgs">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/416x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/196x196/6f6fa1/fff" alt="img">
+                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section grey help">
+    <div class="container">
+        <div class="content-ttl pos-center text-center">
+            <span>OSAHelp</span>
+            <h2 class="ttl">невпинно Працюємо в сферах своєї компетенції</h2>
+        </div>
+        <div class="help-slider">
+            <button type="button" class="help-prev slider-btn slider-prev"></button>
+            <button type="button" class="help-next slider-btn slider-next"></button>
+            <div class="swiper" id="help-slider">
+                <div class="swiper-wrapper">
+                    {{#repeat 8}}
+                    <div class="swiper-slide help-card">
+                        <div class="help-img"><img src="{{root}}/assets/img/icons/help-icon1.svg" alt="img"></div>
+                        <div class="help-ttl">Амуніція</div>
+                        <div class="help-text">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
+                    </div>
+                    {{/repeat}}
+                </div>
+            </div>
+        </div>
+        <div class="help-pag slider-pag"></div>
+    </div>
 </section>

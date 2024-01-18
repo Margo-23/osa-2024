@@ -9,7 +9,7 @@
   --ttl-main-family: 'Montserrat', sans-serif;
   // Headers
   @each $bp, $header in $header-styles {
-    @if $bp == 'small' {
+    @if $bp == 'xsmall' {
       @each $selector, $styles in $header {
         @each $name, $val in $styles {
           --#{$selector}-#{$name}: #{$val};
@@ -60,10 +60,10 @@
   }
 
   @include breakpoint(medium) {
-    --section-space: 80px;
+    --section-space: 50px;
   }
 
   @include breakpoint(large) {
-    --section-space: 100px;
+    --section-space: 70px;
   }
 }

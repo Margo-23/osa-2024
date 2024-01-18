@@ -8,4 +8,4 @@ $(document).on('click', '[data-open]', function () {
     $target.toggleClass('open');
 });
 
-
+import './modules/slider';
