@@ -1,0 +1,64 @@
+.tell{
+  padding: 100px 0;
+
+  @include breakpoint(medium down) {
+    padding: 70px 0;
+  }
+
+  @include breakpoint(small down) {
+    padding: 50px 0;
+  }
+
+  &-card{
+    padding: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
+
+  &-slider{
+    padding: 34px 50px 0 50px;
+    position: relative;
+
+    @include breakpoint(small down) {
+      padding: 14px 0 0 0;
+    }
+  }
+
+  &-img{
+    width: 65px;
+    height: 65px;
+
+    img{
+      object-fit: cover;
+      min-height: 100%;
+    }
+  }
+
+  &-top{
+    display: grid;
+    grid-template-columns: 65px auto;
+    gap: 10px;
+    align-items: center;
+    color: var(--black);
+  }
+
+  &-name{
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &-info{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  &-link{
+    font-size: 12px;
+    color: var(--dark-grey);
+    font-weight: 400;
+  }
+}

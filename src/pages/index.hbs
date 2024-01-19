@@ -26,15 +26,15 @@ title: Громадська організація Оса
             <div class="content-flex-txt">Утворившись з хаосу на початку повномасштабного вторгнення, ми щоденно працюємо на межі власних можливостей. Відкриваємо нові збори, купуємо та ремонтуємо автівки, проводимо гуманітарні виїзди у прифронтові території та робимо ще багато інших не менш важливих справ.</div>
         </div>
         <div class="galery">
-            <div class="galery-imgs">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/416x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/196x196/6f6fa1/fff" alt="img">
-                <img src="https://dummyimage.com/306x196/6f6fa1/fff" alt="img">
+            <div class="galery-imgs" id="gallery-mixed-content-demo">
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item1.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item4.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item2.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item3.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item6.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item5.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item7.jpg" alt="img"></div>
+                <div class="galery-item"><img src="{{root}}/assets/img/items/item8.jpg" alt="img"></div>
             </div>
         </div>
     </div>
@@ -62,5 +62,95 @@ title: Громадська організація Оса
             </div>
         </div>
         <div class="help-pag slider-pag"></div>
+    </div>
+</section>
+
+<section class="section count">
+    <div class="container min">
+        <div class="count-inner">
+            <div class="count-ttl">
+                Допомогли військовим та цивільним на
+                <div class="count-value">13 700 000₴</div>
+                завдяки внескам та підтримці партнерів
+                <div class="count-subttl">станом на 1 вересня 2023</div>
+            </div>
+            <div class="count-btns">
+                <a href="#" class="button secondary">Зробити внесок</a>
+                <a href="#" class="button secondary">Стати патроном</a>
+                <div class=" count-btn">
+                <a href="#" class="button">Запит на допомогу</a>
+                    <div class="count-helper">
+                        <div class="count-helper-img"></div>
+                        <div class="count-helper-txt">Звернутись по допомогу найкраще через емейл!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section number blue">
+    <div class="container">
+        <div class="number-inner">
+            <div class="content-ttl pos-center text-center">
+                <span>Діяльність ОСА в цифрах</span>
+                <h2 class="ttl">ЯКІ ЗБІЛЬШУЮТЬСЯ ЩОДНЯ</h2>
+            </div>
+            <div class="number-box">
+                <div class="number-item">212k+
+                    <span>км з гуманітарними виїздами</span>
+                </div>
+                <div class="number-item">2600+
+                    <span>наборів тактичної медицини забезпечено</span>
+                </div>
+                <div class="number-item">186+
+                    <span>тонн продуктів харчування доставлено</span>
+                </div>
+                <div class="number-item">41
+                    <span>позашляховик куплено, відремонтовано та передано</span>
+                </div>
+                <div class="number-item">33
+                    <span>квадрокоптера передано</span>
+                </div>
+                <div class="number-item">70
+                    <span>гуманітарних виїздів</span>
+                </div>
+                <div class="number-item">10+
+                    <span>тонн відправлених посилок</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section grey tell">
+    <div class="container">
+        <div class="content-ttl">
+            <span>ОСА в ЗМІ</span>
+            <h2 class="ttl">ПРО НАС ГОВОРЯТЬ</h2>
+        </div>
+        <div class="tell-slider">
+            <button type="button" class="tell-prev slider-btn slider-prev"></button>
+            <button type="button" class="tell-next slider-btn slider-next"></button>
+            <div class="swiper" id="tell-slider">
+                <div class="swiper-wrapper">
+                    {{#repeat 8}}
+                        <div class="swiper-slide tell-card">
+                            <div class="tell-top">
+                                <div class="tell-img"><img src="https://dummyimage.com/300x300/6f6fa1/fff" width="65" height="65" alt="img"></div>
+                                <div class="tell-ttl">
+                                    <div class="tell-name">Le Journal de Montreal</div>
+                                    <div class="tell-info">Канадська газета</div>
+                                    <a href="#" class="tell-link">Посилання на статтю</a>
+                                </div>
+                            </div>
+                            <div class="tell-text">“Артем і його група волонтерів за останній місяць роздали майже 40 тисяч обідів, евакуювали 20 сімей і допомогли 500 бійцям”.</div>
+                        </div>
+                    {{/repeat}}
+                </div>
+            </div>
+        </div>
+        <div class="tell-pag slider-pag"></div>
     </div>
 </section>

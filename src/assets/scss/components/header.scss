@@ -72,6 +72,18 @@
 
   &-btns{
     margin-left: auto;
+
+    @include breakpoint(medium down) {
+      margin: 0;
+    }
+  }
+
+  &-pay{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

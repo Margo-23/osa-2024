@@ -1,0 +1,61 @@
+@import '../settings';
+
+.number{
+  padding: 100px 0;
+
+  @include breakpoint(medium down) {
+    padding: 70px 0;
+  }
+
+  @include breakpoint(small down) {
+    padding: 60px 0;
+  }
+
+  &-inner{
+    color: var(--white);
+  }
+
+  .content-ttl, .ttl, span{
+    color: inherit;
+  }
+
+  &-box{
+    padding-top: 34px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+
+    @include breakpoint(medium down) {
+      gap: 40px;
+    }
+  }
+
+  &-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    text-align: center;
+    font-size: 70px;
+    gap: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include breakpoint(large down) {
+      font-size: 50px;
+      width: 200px;
+    }
+
+    @include breakpoint(medium down) {
+      font-size: 45px;
+    }
+
+    span{
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}

@@ -29,3 +29,28 @@ new Swiper('#help-slider', {
         },
     },
 });
+
+new Swiper('#tell-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+        prevEl: '.tell-prev',
+        nextEl: '.tell-next',
+    },
+    pagination: {
+        el: '.tell-pag',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+    },
+});

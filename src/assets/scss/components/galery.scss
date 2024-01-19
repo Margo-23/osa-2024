@@ -4,15 +4,39 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+
+    @include breakpoint(small down) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    width: max-content;
+    min-width: 190px;
 
-    img{
-      height: 100%;
-      min-width: 100%;
-      object-fit: cover;
+    &:nth-child(1), &:nth-child(5), &:nth-child(4),&:nth-child(8){
+      flex: 1;
     }
+
+    @include breakpoint(medium down) {
+      height: 150px;
+      min-width: 150px;
+    }
+    @include breakpoint(small down) {
+      min-width: 150px;
+      width: 100%;
+      flex: 1;
+    }
+  }
+
+  img{
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
   }
 }
