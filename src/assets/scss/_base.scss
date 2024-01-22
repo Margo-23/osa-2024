@@ -51,6 +51,7 @@ p {
 
   &-txt{
     max-width: 525px;
+    flex: 1;
 
     &.small{
       max-width: 415px;

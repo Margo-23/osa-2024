@@ -1,0 +1,109 @@
+.bank{
+  padding: 100px 0;
+
+  @include breakpoint(medium down) {
+    padding: 70px 0;
+  }
+
+  @include breakpoint(small down) {
+    padding: 50px 0;
+  }
+
+  &-inner{
+    display: grid;
+    grid-template-columns: 640px auto;
+    justify-content: space-between;
+    gap: 24px;
+    color: var(--white);
+
+    @include breakpoint(large down) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .content-ttl{
+    span{
+      color: var(--white);
+    }
+
+    .ttl{
+      color: var(--white);
+    }
+  }
+
+  &-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 526px;
+
+    &-helper{
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--ligth-grey);
+      padding-top: 10px;
+    }
+
+    @include breakpoint(large down) {
+      max-width: 100%;
+    }
+  }
+
+  &-btn{
+    margin-top: 44px;
+
+    @include breakpoint(large down) {
+      text-align: center;
+    }
+
+    @include breakpoint(small down) {
+      .button{
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+.detail{
+  background-color: var(--white);
+  color: var(--black);
+  padding: 20px;
+
+  &-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &-arrow{
+    transition: all .3s;
+
+    .open &{
+      transform: rotate(90deg);
+    }
+  }
+
+  &-bottom{
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+
+    div:not(:last-child){
+      margin-bottom: 15px;
+    }
+
+    span{
+      color: var(--dark-grey);
+      font-weight: 600;
+    }
+
+    @include breakpoint(small down) {
+      font-size: 14px;
+    }
+  }
+}

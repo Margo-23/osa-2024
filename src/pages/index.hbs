@@ -74,17 +74,7 @@ title: Громадська організація Оса
                 завдяки внескам та підтримці партнерів
                 <div class="count-subttl">станом на 1 вересня 2023</div>
             </div>
-            <div class="count-btns">
-                <a href="#" class="button secondary">Зробити внесок</a>
-                <a href="#" class="button secondary">Стати патроном</a>
-                <div class=" count-btn">
-                <a href="#" class="button">Запит на допомогу</a>
-                    <div class="count-helper">
-                        <div class="count-helper-img"></div>
-                        <div class="count-helper-txt">Звернутись по допомогу найкраще через емейл!</div>
-                    </div>
-                </div>
-            </div>
+            {{> btns-box}}
         </div>
     </div>
 </section>
@@ -123,8 +113,115 @@ title: Громадська організація Оса
     </div>
 </section>
 
+<section class="section slider-dbl">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Як ми допомагаємо</span>
+                <h2 class="ttl">Робимо все необхідне і звітуємо про це</h2>
+            </div>
+            <div class="content-flex-txt">В основі діяльності ОСА - раціональне волонтерство. Ми концентруємо свої зусилля, аби досягти найвищого коефіцієнту корисної дії  на кожну використану гривню. За час діяльності нам довелось неабияк розиширити межі своїх знань та інструментів підтримки цивільних та військових. Усе це зафіксовано у звітах.</div>
+        </div>
+        <div class="slider-dbl-inner">
+            <div class="swiper slider-dbl-main">
+                <div class="swiper-wrapper">
+                    {{#repeat 4}}
+                    <a href="#" class="swiper-slide">
+                        <img src="{{root}}/assets/img/item0.jpg" alt="img"/>
+                        <div class="slider-dbl-txt">
+                            Від початку повномасштабного вторгнення ГО «ОСА» підтримує наш нескорений народ на прифронтових та деокупованих територіях. Продукти харчування, корм для
+                            тварин, одяг, медикаменти, вогнегасники, генератори – усі ці та інші важливі речі були доставлені силами наших волонтерів тим, хто потребує цього найбільше.
+                        </div>
+                    </a>
+                    {{/repeat}}
+                </div>
+            </div>
+            <div thumbsSlider="" class="swiper slider-dbl-thumb">
+                <div class="swiper-wrapper">
+                    {{#repeat 4}}
+                        <div class="swiper-slide slider-dbl-thumb-item">
+                            <img src="{{root}}/assets/img/item0.jpg" alt="img"/>
+                            <div class="slider-dbl-desc">
+                                <div class="slider-dbl-ttl">6 гуманітарних виїздів літа</div>
+                                <div class="slider-dbl-subttl">на прифронтові та деокуповані території</div>
+                            </div>
+                        </div>
+                    {{/repeat}}
+                </div>
+            </div>
+        </div>
+        <div class="slider-dbl-pag slider-pag"></div>
+        <div class="slider-dbl-btn">
+            <a href="#" class="button">Усі звіти</a>
+        </div>
+    </div>
+</section>
 
-<section class="section grey tell">
+
+<section class="section projects">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Наші проєкти</span>
+                <h2 class="ttl">Актуальні збори та завершені проєкти</h2>
+            </div>
+            <div class="content-flex-txt small">Тут ви можете більш детально ознайомитись із нашими проектами, а також підтримати відкритий збір. Кожен донат наближає нас до закриття збору, а отже і до Перемоги.</div>
+        </div>
+        <div class="projects-inner">
+            {{#repeat 6}}
+                {{> project}}
+            {{/repeat}}
+        </div>
+        <div class="projects-btn">
+            <a href="#" class="button">Усі проєкти</a>
+        </div>
+    </div>
+</section>
+
+<section class="section bank blue no-bottom-space">
+    <div class="container">
+        <div class="bank-inner">
+            <div class="bank-info">
+                <div class="content-ttl small">
+                    <span>Підтримати ОСА</span>
+                    <h2 class="ttl">Підтримати діяльність громадської організації</h2>
+                </div>
+                <div class="bank-txt">
+                    {{#repeat 3}}
+                        <p>Однак ми маємо великий перелік інших операційних витрат, які забезпечують безперебійну діяльність ГО: оплата пального для гуманітарних поїздок, тех. обслуговування волонтерського буса, закупівля гуманітарної допомоги тощо.</p>
+                    {{/repeat}}
+                </div>
+                <div class="bank-btn">
+                    <a href="#" class="button secondary">Підтримати ОСА</a>
+                </div>
+            </div>
+
+            <div class="bank-details">
+                {{# repeat 5}}
+                    <div class="detail">
+                        <div class="detail-top" data-open="#bottom-{{@index}}">
+                            <span>Реквізити USD</span>
+                            <img class="detail-arrow" src="{{root}}/assets/img/arr-right.svg" alt="arrow">
+                        </div>
+                        <div class="detail-bottom" id="bottom-{{@index}}" style="display: none;">
+                            <div><span>Company Name: </span>“UFA” NGO </div>
+                            <div><span>IBAN Code: </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                            <div><span>Important! Purpose of payment:</span> Voluntary donation for the statutory activities of “UFA” NGO</div>
+                            <div><span>IBAN Code </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                            <div><span>IBAN Code </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                        </div>
+                    </div>
+                {{/repeat}}
+                <div class="bank-details-helper">
+                    * Всі фінансові операції, в тому числі списання коштів з кредитної картки, проходять на стороні платіжної системи. Наша ГО ніяким чином не зберігає дані ваших кредитних карток, не проводить перегляд стану вашого рахунку, не передає дані третім особам. Всі операцію захищені платіжною системою, яку ви обираєте для надання фінансової допомоги ГО.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section grey tell no-top-space">
     <div class="container">
         <div class="content-ttl">
             <span>ОСА в ЗМІ</span>
@@ -152,5 +249,37 @@ title: Громадська організація Оса
             </div>
         </div>
         <div class="tell-pag slider-pag"></div>
+    </div>
+</section>
+
+<section class="section team">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Наша команда</span>
+                <h2 class="ttl">почуй наших волонтерів</h2>
+            </div>
+            <div class="content-flex-txt small">
+                <a href="#" class="button">Долучитися до команди</a>
+            </div>
+        </div>
+        <div class="team-inner">
+            {{#repeat 3}}
+                <div class="team-card">
+                    <div class="team-card-top">
+                        <img class="team-card-img" src="{{root}}/assets/img/item0.jpg" alt="photo">
+                        <div class="team-card-info">
+                            <div class="team-card-name">Артем</div>
+                            <div class="team-card-pos"><span>Напрям роботи в ОСА: </span>Голова Правління</div>
+                            <div class="team-card-out"><span>За межами ОСА: </span>Account Manager</div>
+                        </div>
+                    </div>
+                    <div class="team-card-txt">
+                        “Спочатку ОСА була створена, як координаційна група для пошуку допомоги військовим та цивільним, але вже незабаром переросла в повноцінну волонтерську організацію.
+                        Я вважаю, що наше найбільше досягнення це вдячність людей, кому ми мали змогу допомогти. Все інше це тільки статистика”.
+                    </div>
+                </div>
+            {{/repeat}}
+        </div>
     </div>
 </section>

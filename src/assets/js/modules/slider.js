@@ -2,6 +2,7 @@ import Swiper from 'swiper';
 import {
     Navigation,
     Pagination,
+    Thumbs
 } from 'swiper/modules';
 
 new Swiper('#help-slider', {
@@ -52,5 +53,24 @@ new Swiper('#tell-slider', {
         1200: {
             slidesPerView: 4,
         },
+    },
+});
+
+const swiper = new Swiper(".slider-dbl-thumb", {
+    spaceBetween: 0,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    direction: 'vertical',
+});
+const swiper2 = new Swiper(".slider-dbl-main", {
+    modules: [Navigation, Pagination, Thumbs],
+    spaceBetween: 10,
+    pagination: {
+        el: '.slider-dbl-pag',
+        clickable: true,
+    },
+    thumbs: {
+        swiper: swiper,
     },
 });
