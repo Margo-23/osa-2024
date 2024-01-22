@@ -74,3 +74,40 @@ const swiper2 = new Swiper(".slider-dbl-main", {
         swiper: swiper,
     },
 });
+
+
+new Swiper('.influence-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: '.influence-slider-pag',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: "auto",
+        },
+    },
+});
+
+new Swiper('.business-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: '.business-slider-pag',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: "auto",
+        },
+    },
+});

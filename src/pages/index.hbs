@@ -235,7 +235,7 @@ title: Громадська організація Оса
                     {{#repeat 8}}
                         <div class="swiper-slide tell-card">
                             <div class="tell-top">
-                                <div class="tell-img"><img src="https://dummyimage.com/300x300/6f6fa1/fff" width="65" height="65" alt="img"></div>
+                                <div class="tell-img"><img src="https://dummyimage.com/65x65/6f6fa1/fff" width="65" height="65" alt="img"></div>
                                 <div class="tell-ttl">
                                     <div class="tell-name">Le Journal de Montreal</div>
                                     <div class="tell-info">Канадська газета</div>
@@ -249,6 +249,61 @@ title: Громадська організація Оса
             </div>
         </div>
         <div class="tell-pag slider-pag"></div>
+    </div>
+</section>
+
+<section class="section friends">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Наші друзі</span>
+                <h2 class="ttl">БІЗНЕСи ТА ІНФЛЮЕНСЕРИ, ДЯКУЄМО ВАМ</h2>
+            </div>
+            <div class="content-flex-txt small">
+                <span>Станьте нашим другом!</span>
+                <a href="mailto:osavolunteer@gmail.com">osavolunteer@gmail.com</a>
+            </div>
+        </div>
+        <div class="friends-inner">
+            <div class="friends-tabs">
+                <button class="friends-btn active" data-tabs="#influence">Інфлюенсери</button>
+                <button class="friends-btn" data-tabs="#business">Бізнес</button>
+            </div>
+            <div class="friends-content active" id="influence" data-tabs-content>
+                <div class="swiper influence-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 6}}
+                            <div class="swiper-slide friend-card">
+                                <div class="friend-card-img"><img src="https://dummyimage.com/140x140/6f6fa1/fff" width="140" height="140" alt="img"></div>
+                                <div class="friend-card-info">
+                                    <div class="friend-card-name">Олексій Дурнєв</div>
+                                    <div class="friend-card-pos">YouTube-блогер</div>
+                                    <div class="friend-card-txt">Збір авто на ЗСУ та передача військовим термобілизни </div>
+                                </div>
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+                <div class="influence-slider-pag friends-pag slider-pag"></div>
+            </div>
+            <div class="friends-content" id="business" data-tabs-content>
+                <div class="swiper business-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 6}}
+                            <div class="swiper-slide friend-card">
+                                <a href="#" class="friend-card-img"><img src="https://dummyimage.com/140x140/6f8fa2/fff" width="140" height="140" alt="img"></a>
+                                <div class="friend-card-info">
+                                    <div class="friend-card-name">Нова Пошта</div>
+                                    <div class="friend-card-pos">Українська міжнародна група компаній з логістики</div>
+                                    <div class="friend-card-txt">Організація безкоштовної доставки гуманітарних посилок</div>
+                                </div>
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+                <div class="business-slider-pag slider-pag"></div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -267,7 +322,7 @@ title: Громадська організація Оса
             {{#repeat 3}}
                 <div class="team-card">
                     <div class="team-card-top">
-                        <img class="team-card-img" src="{{root}}/assets/img/item0.jpg" alt="photo">
+                        <img class="team-card-img" src="https://dummyimage.com/100x100/6f6fa1/fff" alt="photo">
                         <div class="team-card-info">
                             <div class="team-card-name">Артем</div>
                             <div class="team-card-pos"><span>Напрям роботи в ОСА: </span>Голова Правління</div>

@@ -1,0 +1,111 @@
+.friends{
+  overflow: hidden;
+
+  &-content{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+
+  .swiper{
+    overflow: visible;
+    padding: 5px;
+
+    @include breakpoint(small down){
+      overflow: hidden;
+    }
+  }
+
+  &-tabs{
+    padding: 50px 0 40px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-btn{
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .3s;
+
+    &.active, &:hover{
+      box-shadow: 0px 5px 10px 0px rgba(59, 64, 236, 0.10);
+      background: var(--white);
+    }
+  }
+
+  &-pag{
+    padding-top: 40px;
+  }
+}
+
+.friend-card{
+  max-width: 475px;
+  background: var(--white);
+  box-shadow: 0px 5px 15px 0px rgba(59, 64, 236, 0.08);
+  display: grid;
+  grid-template-columns: 140px auto;
+  gap: 24px;
+  padding: 20px;
+
+  @include breakpoint(medium down){
+    grid-template-columns: 100px auto;
+  }
+
+  @include breakpoint(small down){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-img{
+    width: 140px;
+    height: 140px;
+
+    @include breakpoint(medium down){
+      width: 100px;
+      height: 100px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+  }
+
+  &-pos{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+  }
+
+  &-txt{
+
+  }
+}
