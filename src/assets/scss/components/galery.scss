@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: space-around;
 
     @include breakpoint(small down) {
       flex-direction: column;

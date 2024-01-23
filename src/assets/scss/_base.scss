@@ -65,7 +65,7 @@ p {
     text-align: center;
   }
 
-  a{
+  a:not([class]){
     font-size: 28px;
   }
 

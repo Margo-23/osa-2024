@@ -1,0 +1,89 @@
+.cookies{
+  padding: 30px;
+  width: 586px;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: var(--white);
+
+  @include breakpoint(medium down) {
+    padding: 20px;
+  }
+
+  &.hide{
+    display: none;
+  }
+
+  &-inner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-ttl{
+    font-size: 40px;
+    line-height: 1.1;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @include breakpoint(medium down) {
+      font-size: 20px;
+    }
+  }
+
+  &-btns{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    @include breakpoint(medium down) {
+      padding-top: 20px;
+    }
+
+    @include breakpoint(small down) {
+      flex-direction: column;
+      gap: 10px;
+
+      .button{
+        min-width: 100%;
+      }
+    }
+  }
+
+  .close-btn{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+
+  &-txt{
+    @include breakpoint(small down) {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.close-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+
+  &:hover{
+    transform: rotate(360deg);
+  }
+
+}

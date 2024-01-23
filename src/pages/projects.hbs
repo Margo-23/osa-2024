@@ -1,0 +1,64 @@
+---
+title: Наші проекти
+---
+{{> breadcrumbs}}
+<section class="section projects no-top-space">
+    <div class="container">
+        <h1 class="ttl text-center">{{title}}</h1>
+        <div class="projects-filter">
+            <button class="tabs-btn active" type="button" data-tabs="#open">Активні</button>
+            <button class="tabs-btn" type="button" data-tabs="#closed">Завершені</button>
+            <button class="tabs-btn" type="button" data-tabs="#all">Всі проекти</button>
+
+            <div class="filter-btn" data-filter>
+                <button data-open="#project-filter-list" data-filter-btn><span>Показати 6 проектів</span><img src="{{root}}/assets/img/arr-right.svg" alt="arrow"></button>
+                <ul style="display: none;" id="project-filter-list">
+                    <li class="active" data-filter-item>Показати 6 проектів</li>
+                    <li data-filter-item>Показати 12 проектів</li>
+                    <li data-filter-item>Показати всі проекти</li>
+                </ul>
+            </div>
+        </div>
+        <div class="projects-content active" id="open" data-tabs-content>
+            <div class="projects-inner">
+                {{#repeat 6}}
+                    {{> project}}
+                {{/repeat}}
+            </div>
+        </div>
+        <div class="projects-content" id="closed" data-tabs-content>
+            <div class="projects-inner">
+                {{#repeat 6}}
+                    {{> project class="closed"}}
+                {{/repeat}}
+            </div>
+        </div>
+        <div class="projects-content" id="all">
+            <div class="projects-inner">
+                {{#repeat 3}}
+                    {{> project}}
+                {{/repeat}}
+                {{#repeat 3}}
+                    {{> project class="closed"}}
+                {{/repeat}}
+            </div>
+        </div>
+        {{> pagination}}
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="projects-support">
+            <div class="projects-support-info">
+                <div class="projects-support-ttl">Твоя підтримка наших проєктів в 100% йде на потреби цільових запитів</div>
+                <div class="projects-support-btns">
+                    <a href="#" class="button secondary">Підтримати</a>
+                    <a href="#" class="button">Стати патроном</a>
+                </div>
+            </div>
+            <div class="projects-support-img">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img"/>
+            </div>
+        </div>
+    </div>
+</section>

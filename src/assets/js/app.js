@@ -4,8 +4,13 @@ $(document).on('click', '[data-open]', function () {
     const $target = $($(this).data('open'));
     // $target.toggle(400);
     $target.toggle();
-    $(this).toggleClass('open')
+    $(this).toggleClass('open');
     $target.toggleClass('open');
+});
+
+$(document).on('click', '[data-close]', function () {
+    const $target = $($(this).data('close'));
+    $target.toggle();
 });
 
 $(document).on('click', '[data-tabs]', function () {
@@ -18,8 +23,10 @@ $(document).on('click', '[data-tabs]', function () {
             $(this).removeClass('active');
         }
     )
-    $(this).toggleClass('active')
-    $target.toggleClass('active');
+    $(this).addClass('active')
+    $target.addClass('active');
 });
 
 import './modules/slider';
+import './modules/cookies';
+import './modules/filter';

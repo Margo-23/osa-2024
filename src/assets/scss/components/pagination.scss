@@ -1,0 +1,30 @@
+.pagination{
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  gap: 16px;
+
+  &-btn{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--primary-color);
+
+    &.active, &:hover{
+      font-weight: 600;
+    }
+  }
+
+  .disable{
+    display: none;
+  }
+
+  @include breakpoint(small down){
+    button:not(:last-child), span{
+      display: none;
+    }
+  }
+
+}
