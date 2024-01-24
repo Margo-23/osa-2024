@@ -1,0 +1,19 @@
+<section class="section projects">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Наші проєкти</span>
+                <h2 class="ttl">Актуальні збори та завершені проєкти</h2>
+            </div>
+            <div class="content-flex-txt small">Тут ви можете більш детально ознайомитись із нашими проектами, а також підтримати відкритий збір. Кожен донат наближає нас до закриття збору, а отже і до Перемоги.</div>
+        </div>
+        <div class="projects-inner grid-box">
+            {{#repeat 3}}
+                {{> project}}
+            {{/repeat}}
+        </div>
+        <div class="projects-btn">
+            <a href="/projects.html" class="button">Усі проєкти</a>
+        </div>
+    </div>
+</section>

@@ -27,6 +27,14 @@ $(document).on('click', '[data-tabs]', function () {
     $target.addClass('active');
 });
 
+
+$(document).on('click', '[data-reset]', function () {
+    const $target = $($(this).data('reset'));
+    $target.val('')
+        .attr('type', 'text')
+        .attr('type', 'date');
+});
+
 import './modules/slider';
 import './modules/cookies';
 import './modules/filter';

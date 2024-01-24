@@ -1,0 +1,63 @@
+.pay{
+  overflow: hidden;
+
+  &-card{
+    border-radius: 8px;
+    background: #1B1B1B;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  &-date, &-txt{
+    font-size: 8px;
+  }
+
+  &-img{
+    background: #59677A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+
+    img{
+      width: 8px;
+      height: 8px;
+      margin-top: 2px;
+    }
+  }
+
+  &-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+
+    div:last-child{
+      background: #59677A;
+      padding: 1px 6px;
+      border-radius: 50px;
+      min-width: 78px;
+      text-align: start;
+    }
+  }
+
+  &-slider{
+    padding: 10px 0 50px 0;
+
+    .swiper{
+      overflow: visible;
+    }
+  }
+
+}

@@ -1,0 +1,88 @@
+.gallery-over{
+  overflow: hidden;
+
+  &-inner{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto 455px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    @include breakpoint(medium down){
+      display: block;
+    }
+  }
+
+  &-content{
+    width: 455px;
+    max-width: 100%;
+    min-height: 385px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(59, 64, 236, 0.10);
+    background-color: var(--white);
+    text-align: center;
+
+    @include breakpoint(medium down){
+      margin: 10px auto;
+    }
+  }
+
+  a{
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: underline;
+    padding-top: 10px;
+
+    @include breakpoint(small down){
+      font-size: 20px;
+    }
+  }
+
+  &-txt{
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @include breakpoint(small down){
+      font-size: 18px;
+    }
+  }
+
+  &-box{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    @include breakpoint(medium down){
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &-line{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    img{
+      min-width: 260px;
+      width: 260px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    @include breakpoint(medium down){
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

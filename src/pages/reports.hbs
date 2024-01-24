@@ -1,0 +1,68 @@
+---
+title: Звіти
+---
+{{> breadcrumbs}}
+<section class="section no-top-space reports">
+    <div class="container">
+        <h1 class="ttl text-center">{{title}}</h1>
+        <div class="reports-filter">
+            <button class="reports-filter-reset" data-reset="#reports-date" type="button">Скинути фільтр</button>
+            <label>
+                <input class="reports-date" type="date" id="reports-date" name="reports-date" value="2023-07-22" min="2018-01-01" max="2025-12-31" />
+            </label>
+        </div>
+        <div class="reports-inner grid-box">
+            {{#repeat 6}}
+                {{> report}}
+            {{/repeat}}
+        </div>
+        {{> pagination}}
+    </div>
+</section>
+
+<section class="section gallery-over">
+    <div class="gallery-over-inner">
+        <div class="gallery-over-box">
+            <div class="gallery-over-line">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+            </div>
+            <div class="gallery-over-line">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+            </div>
+        </div>
+
+        <div class="gallery-over-content">
+            <div class="gallery-over-txt">Для тебе доступний звіт з кожного нашого проєкту, закупівлі, колаборації, поїздки чи точкової допомоги в військовому чи гуманітарному напрямку.</div>
+            <span>В разі питань, пиши нам!</span>
+            <a href="mailto:osavolunteer@gmail.com">osavolunteer@gmail.com</a>
+        </div>
+
+        <div class="gallery-over-box">
+            <div class="gallery-over-line">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+            </div>
+            <div class="gallery-over-line">
+                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> number}}
+
+<section class="section">
+    <div class="container">
+        <div class="img-flex">
+            <div class="img-flex-content">
+                <div class="content-ttl">
+                    <span>Стань нашим патроном</span>
+                    <h2 class="ttl">Ваша допомога — дуже важлива! Кожен Ваш внесок наближає нашу перемогу.</h2>
+                </div>
+                {{> btns-box}}
+            </div>
+            <div class="img-flex-img"><img src="{{root}}/assets/img/item0.jpg" alt="img"></div>
+        </div>
+    </div>
+</section>

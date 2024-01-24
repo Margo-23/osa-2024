@@ -1,0 +1,41 @@
+<section class="section bank blue no-bottom-space">
+    <div class="container">
+        <div class="bank-inner">
+            <div class="bank-info">
+                <div class="content-ttl small">
+                    <span>Підтримати ОСА</span>
+                    <h2 class="ttl">Підтримати діяльність громадської організації</h2>
+                </div>
+                <div class="bank-txt">
+                    {{#repeat 3}}
+                        <p>Однак ми маємо великий перелік інших операційних витрат, які забезпечують безперебійну діяльність ГО: оплата пального для гуманітарних поїздок, тех. обслуговування волонтерського буса, закупівля гуманітарної допомоги тощо.</p>
+                    {{/repeat}}
+                </div>
+                <div class="bank-btn">
+                    <a href="#" class="button secondary">Підтримати ОСА</a>
+                </div>
+            </div>
+
+            <div class="bank-details">
+                {{# repeat 5}}
+                    <div class="detail">
+                        <div class="detail-top" data-open="#bottom-{{@index}}">
+                            <span>Реквізити USD</span>
+                            <img class="detail-arrow" src="{{root}}/assets/img/arr-right.svg" alt="arrow">
+                        </div>
+                        <div class="detail-bottom" id="bottom-{{@index}}" style="display: none;">
+                            <div><span>Company Name: </span>“UFA” NGO </div>
+                            <div><span>IBAN Code: </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                            <div><span>Important! Purpose of payment:</span> Voluntary donation for the statutory activities of “UFA” NGO</div>
+                            <div><span>IBAN Code </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                            <div><span>IBAN Code </span>UA653052990000026006020122062 JSC CB “PRIVATBANK”, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE </div>
+                        </div>
+                    </div>
+                {{/repeat}}
+                <div class="bank-details-helper">
+                    * Всі фінансові операції, в тому числі списання коштів з кредитної картки, проходять на стороні платіжної системи. Наша ГО ніяким чином не зберігає дані ваших кредитних карток, не проводить перегляд стану вашого рахунку, не передає дані третім особам. Всі операцію захищені платіжною системою, яку ви обираєте для надання фінансової допомоги ГО.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

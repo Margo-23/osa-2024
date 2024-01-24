@@ -5,18 +5,6 @@
     }
   }
 
-  &-inner{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding-top: 50px;
-
-    @include breakpoint(small down){
-    padding-top: 30px;
-    grid-template-columns: repeat(1, 100%);
-  }
-  }
-
   &-btn{
     margin-top: 40px;
     text-align: center;

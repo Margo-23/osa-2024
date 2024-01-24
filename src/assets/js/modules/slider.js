@@ -111,3 +111,21 @@ new Swiper('.business-slider', {
         },
     },
 });
+
+new Swiper('#pay-slider', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    initialSlide: 8,
+    loop: true,
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 5,
+        },
+        1200: {
+            slidesPerView: 8,
+        },
+    },
+});

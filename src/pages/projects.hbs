@@ -20,21 +20,21 @@ title: Наші проекти
             </div>
         </div>
         <div class="projects-content active" id="open" data-tabs-content>
-            <div class="projects-inner">
+            <div class="projects-inner grid-box">
                 {{#repeat 6}}
                     {{> project}}
                 {{/repeat}}
             </div>
         </div>
         <div class="projects-content" id="closed" data-tabs-content>
-            <div class="projects-inner">
+            <div class="projects-inner grid-box">
                 {{#repeat 6}}
                     {{> project class="closed"}}
                 {{/repeat}}
             </div>
         </div>
-        <div class="projects-content" id="all">
-            <div class="projects-inner">
+        <div class="projects-content" id="all" data-tabs-content>
+            <div class="projects-inner grid-box">
                 {{#repeat 3}}
                     {{> project}}
                 {{/repeat}}

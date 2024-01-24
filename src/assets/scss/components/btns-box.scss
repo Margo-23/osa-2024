@@ -1,6 +1,7 @@
 .btns-box{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  //display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 60px;
   justify-content: center;
 
@@ -9,6 +10,7 @@
   }
 
   @include breakpoint(small down) {
+    display: grid;
     grid-template-columns: repeat(1, 100%);
     width: 100%;
     max-width: 320px;
