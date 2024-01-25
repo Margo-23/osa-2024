@@ -1,0 +1,25 @@
+.er404{
+
+  &-img{
+    width: 800px;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &-ttl{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+
+    @include breakpoint(medium down){
+      font-size: 24px;
+    }
+  }
+
+  &-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

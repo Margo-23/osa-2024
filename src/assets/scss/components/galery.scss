@@ -1,5 +1,6 @@
 .galery{
-  padding: 48px 0 30px 0;
+  padding-top: 48px;
+
   &-imgs{
     display: flex;
     flex-wrap: wrap;
@@ -22,16 +23,19 @@
 
     &:nth-child(1), &:nth-child(5), &:nth-child(4),&:nth-child(8){
       flex: 1;
+
+      @include breakpoint(medium down) {
+        flex: none;
+      }
     }
 
     @include breakpoint(medium down) {
-      height: 150px;
-      min-width: 150px;
+      width: 48%;
+      min-width: auto;
     }
+
     @include breakpoint(small down) {
-      min-width: 150px;
       width: 100%;
-      flex: 1;
     }
   }
 

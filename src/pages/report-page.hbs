@@ -1,0 +1,65 @@
+---
+title: Report
+---
+{{> breadcrumbs}}
+<section class="section report-page no-top-space">
+    <div class="container min">
+        <div class="report-page-inner">
+            <div class="content-ttl text-center">
+                <span>Звіт за 08.2023</span>
+                <h1 class="ttl">6 гуманітарних виїздів літа на прифронтові та деокуповані території</h1>
+            </div>
+            <div class="report-page-slider">
+                <button type="button" class="report-page-prev slider-btn slider-prev"></button>
+                <button type="button" class="report-page-next slider-btn slider-next"></button>
+                <div class="swiper" id="report-page-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 4}}
+                            <div class="swiper-slide report-page-card">
+                                <img src="{{root}}/assets/img/item0.jpg" alt="img">
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+            </div>
+            <div class="report-page-pag slider-pag"></div>
+            <div class="report-page-main">
+                <p>Від початку повномасштабного вторгнення ГО «ОСА» підтримує наш нескорений народ на прифронтових та деокупованих територіях.</p>
+                <p>Продукти харчування, корм для тварин, одяг, медикаменти, вогнегасники, генератори — усі ці та інші важливі речі були доставлені силами наших волонтерів тим, хто потребує цього найбільше. Волонтери ОСА проїхали більше 200 тис. км.</p>
+            </div>
+            <div class="report-page-txt">
+                {{#repeat 8}}
+                    <p>Продукти харчування, корм для тварин, одяг, медикаменти, вогнегасники, генератори — усі ці та інші важливі речі були доставлені силами наших волонтерів тим, хто потребує цього найбільше. Волонтери ОСА проїхали більше 200 тис. км.</p>
+                {{/repeat}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section grey">
+    <div class="container">
+        <div class="img-flex">
+            <div class="img-flex-content">
+                <div class="content-ttl">
+                    <span>Стань нашим патроном</span>
+                    <h2 class="ttl">Ваша допомога — дуже важлива! Кожен Ваш внесок наближає нашу перемогу.</h2>
+                </div>
+                {{> btns-box}}
+            </div>
+            <div class="img-flex-img"><img src="{{root}}/assets/img/item0.jpg" alt="img"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section reports">
+    <div class="container">
+        <div class="reports-inner grid-box">
+            {{#repeat 3}}
+                {{> report}}
+            {{/repeat}}
+        </div>
+        <div class=" reports-all-btn">
+            <a href="/reports.html" class="button">Усі звіти</a>
+        </div>
+    </div>
+</section>

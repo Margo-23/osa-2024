@@ -66,4 +66,8 @@
   @include breakpoint(large) {
     --section-space: 70px;
   }
+
+  @include breakpoint(xlarge) {
+    --section-space: 100px;
+  }
 }

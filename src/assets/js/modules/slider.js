@@ -129,3 +129,34 @@ new Swiper('#pay-slider', {
         },
     },
 });
+
+new Swiper('#report-page-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    pagination: {
+        el: '.report-page-pag',
+        clickable: true,
+    },
+    navigation: {
+        prevEl: '.report-page-prev',
+        nextEl: '.report-page-next',
+    },
+});
+
+new Swiper('#about-slider', {
+    modules: [Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: '.about-pag',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+    },
+});

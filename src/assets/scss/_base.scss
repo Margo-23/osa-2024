@@ -137,10 +137,33 @@ a {
 
   &.grey{
     background-color: var(--grey-bg);
+    padding: 100px 0;
+    @include breakpoint(medium down) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint(small down) {
+      padding: 50px 0;
+    }
   }
 
   &.blue{
     background-color: var(--primary-color);
+    padding: 100px 0;
+
+    @include breakpoint(medium down) {
+      padding: 70px 0;
+    }
+
+    @include breakpoint(small down) {
+      padding: 50px 0;
+    }
+  }
+
+  &.small-space{
+    @include breakpoint(large up) {
+      margin: 70px auto;
+    }
   }
 }
 

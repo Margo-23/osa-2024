@@ -1,0 +1,16 @@
+.about{
+  overflow: hidden;
+
+  &.no-top-space{
+    @include breakpoint(medium down){
+      padding-top: 40px;
+    }
+  }
+
+  &-slider{
+    .swiper{
+      overflow: visible;
+    }
+  }
+
+}

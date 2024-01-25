@@ -1,0 +1,105 @@
+---
+title: Про нас
+---
+{{> breadcrumbs}}
+<section class="section about no-top-space">
+    <div class="container">
+        <h1 class="ttl text-center">{{title}}</h1>
+        <div class="about-inner">
+            <div class="about-slider">
+                <div class="swiper" id="about-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 6}}
+                            <div class="swiper-slide about-card">
+                                <div class="about-card-img"><img src="{{root}}/assets/img/item0.jpg" alt="img"></div>
+                                <div class="about-card-name">Амуніція</div>
+                                <div class="about-card-pos">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
+                                <div class="about-card-txt">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+            </div>
+            <div class="about-pag slider-pag"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+    </div>
+</section>
+
+<section class="section grey">
+    <div class="container">
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+    </div>
+</section>
+
+<section class="section friends">
+    <div class="container">
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Наші друзі</span>
+                <h2 class="ttl">БІЗНЕСи ТА ІНФЛЮЕНСЕРИ, ДЯКУЄМО ВАМ</h2>
+            </div>
+            <div class="content-flex-txt small">
+                <span>Станьте нашим другом!</span>
+                <a href="mailto:osavolunteer@gmail.com">osavolunteer@gmail.com</a>
+            </div>
+        </div>
+        <div class="friends-inner">
+            <div class="friends-tabs">
+                <button class="tabs-btn active" data-tabs="#influence">Інфлюенсери</button>
+                <button class="tabs-btn" data-tabs="#business">Бізнес</button>
+            </div>
+            <div class="friends-content active" id="influence" data-tabs-content>
+                <div class="swiper influence-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 6}}
+                            <div class="swiper-slide friend-card">
+                                <div class="friend-card-img"><img src="https://dummyimage.com/140x140/6f6fa1/fff" width="140" height="140" alt="img"></div>
+                                <div class="friend-card-info">
+                                    <div class="friend-card-name">Олексій Дурнєв</div>
+                                    <div class="friend-card-pos">YouTube-блогер</div>
+                                    <div class="friend-card-txt">Збір авто на ЗСУ та передача військовим термобілизни </div>
+                                </div>
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+                <div class="influence-slider-pag friends-pag slider-pag"></div>
+            </div>
+            <div class="friends-content" id="business" data-tabs-content>
+                <div class="swiper business-slider">
+                    <div class="swiper-wrapper">
+                        {{#repeat 6}}
+                            <div class="swiper-slide friend-card">
+                                <a href="#" class="friend-card-img"><img src="https://dummyimage.com/140x140/6f8fa2/fff" width="140" height="140" alt="img"></a>
+                                <div class="friend-card-info">
+                                    <div class="friend-card-name">Нова Пошта</div>
+                                    <div class="friend-card-pos">Українська міжнародна група компаній з логістики</div>
+                                    <div class="friend-card-txt">Організація безкоштовної доставки гуманітарних посилок</div>
+                                </div>
+                            </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+                <div class="business-slider-pag slider-pag"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section faq">
+    <div class="container">
+
+    </div>
+</section>
