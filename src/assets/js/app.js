@@ -35,6 +35,7 @@ $(document).on('click', '[data-reset]', function () {
         .attr('type', 'date');
 });
 
+
 import './modules/slider';
 import './modules/cookies';
 import './modules/filter';

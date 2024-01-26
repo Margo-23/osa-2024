@@ -1,0 +1,94 @@
+.faq{
+
+  &-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    @include breakpoint(small down) {
+      display: flex;
+      flex-direction: column;
+
+      .content-ttl{
+        text-align: center;
+      }
+    }
+  }
+
+  &-list{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  &-item{
+    box-shadow: 0px 10px 40px -22px rgba(72, 98, 132, 0.10);
+
+    &-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1;
+      padding: 20px;
+      color: var(--black);
+      background-color: #F5F5F5;
+
+      &.open{
+        background-color: var(--white);
+      }
+    }
+
+    &-bottom{
+      padding: 0 20px 20px 20px;
+      font-size: 16px;
+      font-weight: 400;
+      background-color: #F5F5F5;
+
+      &.open{
+        background-color: var(--white);
+      }
+
+      @include breakpoint(small down) {
+        font-size: 14px;
+      }
+    }
+
+    &-btn{
+      position: relative;
+      padding: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+
+      &:after{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: var(--black);
+        top: 19px;
+        left: 10px;
+      }
+
+      &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        height: 20px;
+        width: 2px;
+        background-color: var(--black);
+        top: 10px;
+        left: 19px;
+
+        .open &{
+          display: none;
+        }
+      }
+    }
+  }
+}

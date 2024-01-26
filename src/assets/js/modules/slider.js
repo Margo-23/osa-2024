@@ -8,7 +8,6 @@ import {
 new Swiper('#help-slider', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
-    slidesPerGroup: 2,
     spaceBetween: 24,
     navigation: {
         prevEl: '.help-prev',
@@ -146,7 +145,7 @@ new Swiper('#report-page-slider', {
 new Swiper('#about-slider', {
     modules: [Pagination],
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 25,
     pagination: {
         el: '.about-pag',
         clickable: true,
@@ -154,6 +153,27 @@ new Swiper('#about-slider', {
     breakpoints: {
         768: {
             slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+    },
+});
+
+new Swiper('#how-slider', {
+    modules: [Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: '.how-pag',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
         },
         1200: {
             slidesPerView: 4,

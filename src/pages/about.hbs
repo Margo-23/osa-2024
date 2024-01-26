@@ -12,9 +12,9 @@ title: Про нас
                         {{#repeat 6}}
                             <div class="swiper-slide about-card">
                                 <div class="about-card-img"><img src="{{root}}/assets/img/item0.jpg" alt="img"></div>
-                                <div class="about-card-name">Амуніція</div>
-                                <div class="about-card-pos">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
-                                <div class="about-card-txt">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
+                                <div class="about-card-name">Артем</div>
+                                <div class="about-card-pos">Почесний Голова</div>
+                                <div class="about-card-txt">Портативної станції радіоелектронної боротьби, що «захищає від усіх FPV», не існує. Вона може бути непоганим </div>
                             </div>
                         {{/repeat}}
                     </div>
@@ -27,19 +27,54 @@ title: Про нас
 
 <section class="section">
     <div class="container">
-
+        <div class="content-ttl pos-center text-center small">
+            <span>Наші документи</span>
+            <h2 class="ttl">Ми є офіційно зареєстрованою го</h2>
+        </div>
+        <div class="docs">
+            <a target="_blank" href="#" class="docs-item"><img src="{{root}}/assets/img/icons/file-icon.svg" alt="img"></a>
+            <a target="_blank" href="#" class="docs-item"><img src="{{root}}/assets/img/icons/file-icon.svg" alt="img"></a>
+        </div>
     </div>
 </section>
 
-<section class="section grey">
+<section class="section grey how">
     <div class="container">
-
+        <div class="content-flex">
+            <div class="content-ttl small">
+                <span>Як ми працюємо</span>
+                <h2 class="ttl">Дати заголовку в два рядки</h2>
+            </div>
+            <div class="content-flex-txt">Утворившись з хаосу на початку повномасштабного вторгнення, ми щоденно працюємо на межі власних можливостей. Відкриваємо нові збори, купуємо та ремонтуємо автівки, проводимо гуманітарні виїзди у прифронтові території та робимо ще багато інших не менш важливих справ.</div>
+        </div>
+        <div class="how-slider">
+            <div class="swiper" id="how-slider">
+                <div class="swiper-wrapper">
+                    {{#repeat 5}}
+                        <div class="swiper-slide help-card">
+                            <div class="help-img"><img src="{{root}}/assets/img/icons/how-icon.svg" alt="img"></div>
+                            <div class="help-ttl">1. Запит</div>
+                            <div class="help-text">Доставка захисного спорядження, тактичного одягу та аксесуарів</div>
+                        </div>
+                    {{/repeat}}
+                </div>
+            </div>
+        </div>
+        <div class="how-pag slider-pag"></div>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
-
+        <div class="content-ttl pos-center text-center small">
+            <span>Наші цінності</span>
+            <h2 class="ttl">Дати заголовку в два рядки</h2>
+        </div>
+        <div class="grid-box">
+            {{#repeat 3}}
+                {{> default-card}}
+            {{/repeat}}
+        </div>
     </div>
 </section>
 
@@ -100,6 +135,35 @@ title: Про нас
 
 <section class="section faq">
     <div class="container">
-
+        <div class="faq-inner">
+            <div class="faq-box">
+                <div class="content-ttl small">
+                    <span>FAQ</span>
+                    <h2 class="ttl">Дати заголовку в два рядки</h2>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-list">
+                    {{#repeat 5}}
+                        <div class="faq-item">
+                            <div class="faq-item-top" data-open="#faq-{{@index}}">
+                                <div class="faq-item-ttl">How soon will the first session start</div>
+                                <button class="faq-item-btn" aria-label="button"></button>
+                            </div>
+                            <div class="faq-item-bottom" id="faq-{{@index}}" style="display: none;">
+                                <p>Identifying the root of the problem on your own can be quite difficult. Don't worry — a psychotherapist can help with making a request.</p>
+                                <div>In this case, you should describe the symptoms of the problem:
+                                <ul>
+                                    <li>What exactly is bothering you at the moment?</li>
+                                    <li>How does it affect areas of your life?</li>
+                                    <li>What do you think this could be related to?</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {{/repeat}}
+                </div>
+            </div>
+        </div>
     </div>
 </section>

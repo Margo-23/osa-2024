@@ -13,4 +13,68 @@
     }
   }
 
+  &-card{
+
+    &-img{
+      margin-bottom: 20px;
+      width: 100%;
+      height: 306px;
+
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint(medium down){
+        height: 230px;
+      }
+    }
+
+    &-name{
+      font-size: 20px;
+      color: var(--black);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    &-pos{
+      margin-bottom: 20px;
+      color: var(--black);
+    }
+  }
+}
+
+.docs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+
+  &-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    img{
+      object-fit: cover;
+    }
+  }
+}
+
+
+.how{
+  overflow: hidden;
+
+  &-slider{
+    padding-top: 52px;
+
+    .swiper{
+      overflow: visible;
+    }
+  }
 }
